@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ProductName</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="" *ngFor="let item of cartItems">
+                            <td scope="row">{{item.productName}}</td>
+                            <td>{{item.productPrice}}</td>
+                            <td>{{item.productQuantity}}</td>
+                            <td><button type="button" class="btn btn-danger" (click)="deleteCartItem(item.id)">Remove</button></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <button type="button" routerLink="/orders" class="btn btn-primary">Place Order</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

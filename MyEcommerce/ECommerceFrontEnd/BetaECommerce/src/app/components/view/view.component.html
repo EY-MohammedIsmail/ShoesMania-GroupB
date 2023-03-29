@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-5">
+            <div class="table-responsive-lg">
+                <table class="table table-success">
+                    <thead>
+                        <tr>
+                            <th scope="col">ProductName</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td scope="row">{{product.name}}</td>
+                            <td>{{product.description}}</td>
+                            <td>{{product.price}}</td>
+                            <td><button type="button" (click)="addToCart()" [disabled]="!authService.isloggedin()" class="btn btn-primary">Add to Cart
+                                <span *ngIf="!authService.isloggedin()">(Login First)</span>
+                            </button></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
